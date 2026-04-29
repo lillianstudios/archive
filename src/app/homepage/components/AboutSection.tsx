@@ -64,7 +64,7 @@ export default function AboutSection() {
           <div ref={imageRef} className="reveal-fade">
             <div className="relative overflow-hidden" style={{ aspectRatio: '4/5' }}>
               <AppImage
-                src="https://images.unsplash.com/photo-1706009238933-ee170740b222"
+                src="/assets/images/Me-Professional-1777489236065.png"
                 alt="Architect standing in minimalist concrete space, warm light casting geometric shadow patterns on floor, professional and contemplative"
                 fill
                 className="object-cover object-top"
