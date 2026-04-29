@@ -117,24 +117,24 @@ export default function ArchitectureGallery() {
         projects={projects}
         activeIndex={activeIndex}
         onClose={() => setActiveIndex(null)}
-        onPrev={() => setActiveIndex((i) => (i !== null && i > 0 ? i - 1 : i))}
-        onNext={() => setActiveIndex((i) => (i !== null && i < projects.length - 1 ? i + 1 : i))}
-      />
+        onPrev={() => setActiveIndex((i) => i !== null && i > 0 ? i - 1 : i)}
+        onNext={() => setActiveIndex((i) => i !== null && i < projects.length - 1 ? i + 1 : i)} />
+
 
       <section className="bg-background py-16 md:py-20">
         <div className="px-6 md:px-10 max-w-screen-xl mx-auto">
           {/* Filter tabs */}
           <div className="flex flex-wrap gap-6 mb-12 border-b border-border pb-6">
-            {['ALL', 'ACADEMIC', 'PROFESSIONAL', 'PERSONAL'].map((tab) => (
-              <button
-                key={tab}
-                className={`font-sans text-[11px] font-medium tracking-[0.16em] uppercase transition-colors duration-200 ${
-                  tab === 'ALL' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
+            {['ALL', 'ACADEMIC', 'PROFESSIONAL', 'PERSONAL'].map((tab) =>
+            <button
+              key={tab}
+              className={`font-sans text-[11px] font-medium tracking-[0.16em] uppercase transition-colors duration-200 ${
+              tab === 'ALL' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`
+              }>
+
                 {tab}
               </button>
-            ))}
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
@@ -185,6 +185,6 @@ export default function ArchitectureGallery() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }

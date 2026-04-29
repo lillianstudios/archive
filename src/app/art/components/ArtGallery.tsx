@@ -55,7 +55,7 @@ const artworks: ModalProject[] = [
   year: '2024',
   category: 'Models',
   description: 'A delicate timber and card pavilion maquette with fine structural members. The model explores a lightweight canopy structure, photographed against a neutral grey background to emphasise the elegance of the structural system.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_150e693ba-1777484335350.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_191b21ef7-1777489187156.png",
   alt: 'Delicate timber and card pavilion maquette with fine structural members, photographed against neutral grey background',
   materials: 'Timber, White Card',
   role: 'Model Maker'
@@ -66,7 +66,7 @@ const artworks: ModalProject[] = [
   year: '2023',
   category: 'Architectural Drawings',
   description: 'A precise ink elevation drawing of a coastal house with hatched shadows and hand-lettered annotations. The drawing communicates the material palette and proportional system of the design with technical clarity.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_14a47f32e-1777484333467.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_107423da3-1777489185472.png",
   alt: 'Precise ink elevation drawing of coastal house with hatched shadows, hand-lettered annotations and scale bar',
   materials: 'Ink on Tracing Paper',
   role: 'Draughtsperson'
@@ -77,7 +77,7 @@ const artworks: ModalProject[] = [
   year: '2023',
   category: 'Paintings',
   description: 'A large format gestural painting in muted greens and greys evoking the Irish landscape. Expressive mark-making captures the atmospheric quality of the west of Ireland — its shifting light, bogland, and coastal drama.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1540f333d-1777484333129.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_119ddfa59-1777489184516.png",
   alt: 'Large format gestural painting in muted greens and greys evoking Irish landscape, expressive mark-making',
   materials: 'Acrylic on Canvas',
   role: 'Artist'
@@ -88,7 +88,7 @@ const artworks: ModalProject[] = [
   year: '2022',
   category: 'Models',
   description: 'An abstract tectonic study model in white plaster showing folded and fractured surfaces. Directional studio lighting reveals the depth of the relief, exploring how structural forces might be expressed through material deformation.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1e053760b-1777484332433.png",
+  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1c6fbea8b-1777489184507.png",
   alt: 'Abstract tectonic study model in white plaster showing folded and fractured surfaces, directional studio lighting',
   materials: 'Plaster',
   role: 'Model Maker'
@@ -132,9 +132,9 @@ export default function ArtGallery() {
         projects={artworks}
         activeIndex={activeIndex}
         onClose={() => setActiveIndex(null)}
-        onPrev={() => setActiveIndex((i) => (i !== null && i > 0 ? i - 1 : i))}
-        onNext={() => setActiveIndex((i) => (i !== null && i < artworks.length - 1 ? i + 1 : i))}
-      />
+        onPrev={() => setActiveIndex((i) => i !== null && i > 0 ? i - 1 : i)}
+        onNext={() => setActiveIndex((i) => i !== null && i < artworks.length - 1 ? i + 1 : i)} />
+
 
       <section className="bg-background py-16 md:py-20">
         <div className="px-6 md:px-10 max-w-screen-xl mx-auto">
@@ -217,6 +217,6 @@ export default function ArtGallery() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }

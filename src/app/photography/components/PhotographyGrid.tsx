@@ -124,9 +124,9 @@ export default function PhotographyGrid() {
         projects={photos}
         activeIndex={activeIndex}
         onClose={() => setActiveIndex(null)}
-        onPrev={() => setActiveIndex((i) => (i !== null && i > 0 ? i - 1 : i))}
-        onNext={() => setActiveIndex((i) => (i !== null && i < photos.length - 1 ? i + 1 : i))}
-      />
+        onPrev={() => setActiveIndex((i) => i !== null && i > 0 ? i - 1 : i)}
+        onNext={() => setActiveIndex((i) => i !== null && i < photos.length - 1 ? i + 1 : i)} />
+
 
       <section className="bg-background py-16 md:py-20">
         <div className="px-6 md:px-10 max-w-screen-xl mx-auto">
@@ -218,6 +218,6 @@ export default function PhotographyGrid() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }
