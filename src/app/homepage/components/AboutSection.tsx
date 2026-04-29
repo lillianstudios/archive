@@ -49,13 +49,13 @@ export default function AboutSection() {
           <div ref={textRef} className="reveal-up flex flex-col justify-between">
             <div>
               <p className="font-sans text-base md:text-lg text-foreground leading-relaxed mb-6">
-                Where technical precision meets a decade of creative practice.
-              </p>
-              <p className="font-sans text-base md:text-lg text-foreground leading-relaxed mb-6">
                 I&apos;m an architectural technology graduate with a strong foundation in sustainable design, BIM workflows, and residential planning. My journey into the building engineering industry began at 10 years old, sparking a lifelong passion. This, combined with a decade of art studies, provides a unique creative outlook on architecture.
               </p>
-              <p className="font-sans text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="font-sans text-base md:text-lg text-foreground leading-relaxed mb-6">
                 I am experienced in transforming conceptual ideas into practical, visually compelling outcomes through a mix of hand drawing, BIM modelling, and rendering. Self-driven and team-oriented, I&apos;ve proven my determination in design competitions and internships. Currently, I&apos;m advancing towards architectural licensing, with a long-term focus on BIM engineering and green energy innovation.
+              </p>
+              <p className="font-sans text-base md:text-lg text-foreground leading-relaxed mb-6">
+                I am actively seeking a professional placement to deepen my technical expertise, contribute to impactful projects, and grow within a collaborative environment.
               </p>
             </div>
           </div>
