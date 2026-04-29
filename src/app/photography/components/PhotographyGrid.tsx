@@ -90,6 +90,11 @@ const photos: ModalProject[] = [
 export default function PhotographyGrid() {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -120,12 +125,14 @@ export default function PhotographyGrid() {
 
   return (
     <>
-      <ProjectModal
-        projects={photos}
-        activeIndex={activeIndex}
-        onClose={() => setActiveIndex(null)}
-        onPrev={() => setActiveIndex((i) => i !== null && i > 0 ? i - 1 : i)}
-        onNext={() => setActiveIndex((i) => i !== null && i < photos.length - 1 ? i + 1 : i)} />
+      {mounted && (
+        <ProjectModal
+          projects={photos}
+          activeIndex={activeIndex}
+          onClose={() => setActiveIndex(null)}
+          onPrev={() => setActiveIndex((i) => i !== null && i > 0 ? i - 1 : i)}
+          onNext={() => setActiveIndex((i) => i !== null && i < photos.length - 1 ? i + 1 : i)} />
+      )}
 
 
       <section className="bg-background py-16 md:py-20">
