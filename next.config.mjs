@@ -2,6 +2,14 @@ import { imageHosts } from './image-hosts.config.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // --- ADDED THESE TWO LINES ---
+  output: 'export', 
+  images: {
+    unoptimized: true, 
+    remotePatterns: imageHosts,
+    minimumCacheTTL: 60,
+  },
+  // -----------------------------
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',
   typescript: {
@@ -9,10 +17,6 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  images: {
-    remotePatterns: imageHosts,
-    minimumCacheTTL: 60,
   },
   webpack(
     config,
